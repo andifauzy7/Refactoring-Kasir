@@ -17,7 +17,7 @@ public class Main {
         DaftarMinuman[0] = new Minuman("Teh Tarik", "MN005",7000);
         DaftarMinuman[1] = new Minuman("Susu Jahe", "MN006",7000);
         DaftarMinuman[2] = new Minuman("Kopi Susu", "MN007",5000);
-        Menu.TampilMenu();
+        Produk.TampilMenu();
         String Konfirmasi;
         String MinumanNote;
         String Keterangan="";
@@ -25,7 +25,7 @@ public class Main {
         while (Lagi != true){
             System.out.print("Pilih Menu (Input Kode) : ");
             String KodeMenu = Input.nextLine();
-            int Harga = Menu.CariProduk(KodeMenu);
+            int Harga = Produk.CariProduk(KodeMenu);
             System.out.print("Banyak Pesanan : ");
             int BanyakPesanan = Integer.valueOf(Input.nextLine());
             if(KodeMenu.substring(0,2).equals("MN")){
@@ -33,7 +33,7 @@ public class Main {
                 System.out.print("Pakai Gula [true/false] : ");
                 MinumanNote = Input.nextLine();
                 if(MinumanNote.equals("true")){
-                    Keterangan += Menu.CariNama(KodeMenu) + " " + "Pakai Gula ";
+                    Keterangan += Produk.CariNama(KodeMenu) + " " + "Pakai Gula ";
                 }
                 System.out.print("Pakai Es [true/false] : ");
                 MinumanNote = Input.nextLine();
@@ -41,7 +41,7 @@ public class Main {
                     Keterangan += "Pakai Es.";
                 }
             }
-            Customer.Order(Menu.CariNama(KodeMenu), BanyakPesanan, Harga,
+            Customer.Order(Produk.CariNama(KodeMenu), BanyakPesanan, Harga,
                     Keterangan);
             System.out.print("Pesan Kembali [true/false]: ");
             Konfirmasi = Input.nextLine();

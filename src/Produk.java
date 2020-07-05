@@ -1,11 +1,11 @@
-public class Menu {
+public class Produk {
     private static String[] NamaMakanan = new String[10];
     private static String[] KodeProduk = new String[10];
     private static int[] Harga = new int[10];
     private static int id=0;
-    public Menu(){
+    public Produk(){
     }
-    public Menu(String Nama, String IdProduk, int Nominal){
+    public Produk(String Nama, String IdProduk, int Nominal){
         NamaMakanan[id] = Nama;
         Harga[id] = Nominal;
         KodeProduk[id] = IdProduk;
