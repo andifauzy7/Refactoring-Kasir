@@ -1,11 +1,15 @@
-public class Cashier extends Person {
-    public Cashier(String Name) {
-        super(Name);
+public class Cashier {
+    private String kodeCashier;
+    private String nameCashier;
+    public Cashier(String kodeCashier, String nameCashier) {
+        this.kodeCashier = kodeCashier;
+        this.nameCashier = nameCashier;
+    }
+    public String getKodeCashier() {
+        return kodeCashier;
     }
 
-    public String Greetings() {
-        return "=Selamat Datang di Warung Ngopi!=\n" +
-                "=Cashier : " + this.getNama() + "===========\n" +
-                "==========(Daftar Menu)==========";
+    public String getNameCashier() {
+        return nameCashier;
     }
 }
